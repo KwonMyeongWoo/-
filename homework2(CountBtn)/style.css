@@ -1,0 +1,17 @@
+* {
+  padding: 0;
+  margin: 20px;
+  box-sizing: border-box;
+  color: inherit;
+  text-decoration: none;
+  list-style: none;
+}
+
+.count {
+  font-size: 100px;
+}
+.click-button {
+  width: 160px;
+  height: 50px;
+  font-size: 40px;
+}
