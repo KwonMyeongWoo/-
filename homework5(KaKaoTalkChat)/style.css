@@ -7,6 +7,7 @@
   --send--btn--active: 249, 224, 0;
   --send--text--active: 0, 0, 0;
 }
+
 * {
   padding: 0;
   margin: 0;
@@ -21,9 +22,12 @@ body {
 header {
   width: 100vw;
   height: 80px;
-  background-color: white;
+  background-color: rgb(var(--background));
+
   display: flex;
   align-items: center;
+  position: fixed;
+  top: 0px;
 }
 header > * {
   margin-left: 10px;
@@ -40,8 +44,37 @@ header > * {
 }
 
 .user-messege-box {
-  width: 100vw;
-  height: 100vh;
+  position: relative;
+  top: 80px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.user-messege-box > * {
+  position: absolute;
+  right: 30px;
+  padding: 12px;
+  align-content: center;
+  background-color: rgb(var(--user--talk));
+  border-radius: 5px;
+}
+.user-messege {
+  position: absolute;
+  right: 30px;
+  padding: 12px;
+  align-content: center;
+  background-color: rgb(var(--user--talk));
+  border-radius: 5px;
+  margin-top: 60px;
+}
+.user-messege-box > *:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: -20px;
+  border-left: 30px solid rgb(var(--user--talk));
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
 }
 
 footer {
@@ -51,16 +84,28 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  bottom: 0px;
+  position: fixed;
 }
 .messege-input {
   width: 80%;
-  font-size: 20px;
+  padding-left: 10px;
+  font-size: 15px;
   border: none;
   outline: none;
 }
 .messege-button {
-  width: 20%;
-  height: 50%;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   margin-left: 10px;
   margin-right: 10px;
+  background-color: rgb(var(--send--btn));
+  color: rgb(var(--send--text));
+  border: none;
+}
+.messege-button:hover {
+  background-color: rgb(var(--send--btn--active));
+  color: rgb(var(--send--text--active));
 }
