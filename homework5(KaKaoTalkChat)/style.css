@@ -23,7 +23,7 @@ header {
   width: 100vw;
   height: 80px;
   background-color: rgb(var(--background));
-
+  z-index: 1;
   display: flex;
   align-items: center;
   position: fixed;
@@ -44,29 +44,27 @@ header > * {
 }
 
 .user-messege-box {
-  position: relative;
+  position: absolute;
   top: 80px;
-  width: 100%;
+  width: 100vw;
   height: 100%;
+  z-index: -1;
+  overflow-y: scroll;
   display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
+
 .user-messege-box > * {
-  position: absolute;
-  right: 30px;
-  padding: 12px;
+  position: relative;
+  margin-bottom: 10px;
+  padding: 0.5em 1em;
+  right: 20px;
   align-content: center;
   background-color: rgb(var(--user--talk));
   border-radius: 5px;
 }
-.user-messege {
-  position: absolute;
-  right: 30px;
-  padding: 12px;
-  align-content: center;
-  background-color: rgb(var(--user--talk));
-  border-radius: 5px;
-  margin-top: 60px;
-}
+
 .user-messege-box > *:after {
   content: '';
   position: absolute;
